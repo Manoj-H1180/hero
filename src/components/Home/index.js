@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Header from "../Header";
-import Scroll from "../Scroll/SmoothScroll";
+// import Scroll from "../Scroll/SmoothScroll";
 import "./index.css";
 
 const Home = () => {
   return (
     <div className="home-container">
       <Header home />
-      <Scroll />
+      {/* <Scroll /> */}
       <section className="hero-row">
         <div className="hero-section">
           <h1 className="hero-heading">
