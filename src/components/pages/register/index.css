@@ -73,6 +73,7 @@
   font-size: 15px;
   font-weight: 550;
   margin-right: 6px;
+  outline: none;
 }
 
 .lastName {
@@ -88,6 +89,7 @@
     sans-serif;
   font-size: 15px;
   font-weight: 550;
+  outline: none;
 }
 
 .userEmail {
@@ -102,6 +104,7 @@
     sans-serif;
   font-size: 15px;
   font-weight: 550;
+  outline: none;
 }
 
 .signUpBtn {
@@ -136,4 +139,43 @@
   font-size: 15px;
   font-weight: 550;
   margin-top: 10px;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    padding: 0px 20px;
+    background-size: cover;
+    padding-top: 100px;
+  }
+  .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .g-signup-btn {
+    width: 360px;
+  }
+  .nameInputRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstName {
+    width: 360px;
+    margin-bottom: 10px;
+    margin-left: 6px;
+  }
+  .lastName {
+    width: 360px;
+    margin-left: 0px;
+  }
+  .userEmail {
+    width: 360px;
+  }
+  .userPass {
+    width: 360px;
+  }
+  .signUpBtn {
+    width: 380px;
+  }
 }

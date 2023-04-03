@@ -82,6 +82,7 @@
   padding-left: 15px;
   color: #bababa;
   background-color: #333333;
+  outline: none;
 }
 
 .password-input {
@@ -93,6 +94,11 @@
   color: #bababa;
   background-color: #333333;
   margin-top: 15px;
+  outline: none;
+}
+
+.password-input:focus {
+  border: 2px solid #0099ff;
 }
 
 .email-input:focus {
@@ -118,4 +124,27 @@
 .logo {
   height: 50px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  /* .login-container {
+    display: flex;
+    flex-direction: column;
+  } */
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .g-login-btn {
+    width: 420px;
+  }
+  .email-input {
+    width: 410px;
+  }
+  .password-input {
+    width: 410px;
+  }
+  .signInBtn {
+    width: 428px;
+  }
 }

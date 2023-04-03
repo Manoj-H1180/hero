@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { MdOutlineKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./index.css";
 
 const Header = (props) => {
   const { domain, home } = props;
+  const [isLoading, setIsLoading] = useState(true);
   const isActive = domain ? "active-tab" : "";
   const isHomeActive = home ? "active-tab" : "";
+
+  useEffect(() => {
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   return (
     <nav className="nav-container">
@@ -75,7 +86,10 @@ const Header = (props) => {
       </ul>
       <div className="pubbtn-section">
         <Link to="/sign-up">
-          <button className="publish-btn" type="button">
+          <button
+            className={isLoading ? "publish-btn-loading" : "publish-btn"}
+            type="button"
+          >
             Publish your site
           </button>
         </Link>

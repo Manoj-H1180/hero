@@ -1,0 +1,45 @@
+.dash-container {
+  display: flex;
+}
+
+.dashboard-sidebar {
+  background-color: #232323;
+  width: 200px;
+  height: 100vh;
+  padding: 10px 10px;
+}
+
+.d-logo {
+  width: 150px;
+}
+
+.sidebar-ul {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.sidebar-list {
+  color: #909090;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.sidebar-list:hover {
+  background-color: #383838;
+  color: #fff;
+}
+
+.sidebar-list:hover .sidebar-icon {
+  color: #fff;
+}
+
+.sidebar-icon {
+  width: 25px;
+  height: 25px;
+  color: #909090;
+}

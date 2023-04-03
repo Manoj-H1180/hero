@@ -1,0 +1,102 @@
+.nav-logo {
+  width: 200px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 25px;
+  width: 100vw;
+}
+
+.nav-container {
+  border-bottom: 1px solid lightgray;
+}
+
+.nav-ul {
+  display: flex;
+  list-style: none;
+  /* gap: 20px; */
+}
+
+.nav-li {
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #9392a9;
+  padding: 6px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.active-li {
+  background-color: #f1f1fc;
+  color: #000;
+}
+
+.d-nav-icon {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+}
+
+.nav-account-section {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: gray;
+  font-weight: 300;
+  width: 100px;
+}
+
+.d-li-link {
+  text-decoration: none;
+  color: gray;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.d-li-link:hover {
+  background-color: #f1f1fc;
+  color: #000;
+}
+
+.link {
+  text-decoration: none;
+  color: gray;
+}
+
+.logoutBtn {
+  padding: 2px 2px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.logoutBtn:hover {
+  background-color: #f1f1fc;
+  color: #000;
+}

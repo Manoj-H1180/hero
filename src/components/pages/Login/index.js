@@ -16,8 +16,10 @@ class Login extends Component {
     this.setState({ password: e.target.value });
   };
 
-  onLoginSuccess = (token) => {
-    Cookies.set("jwt_token", token, { expires: 30 });
+  onLoginSuccess = (details) => {
+    const { jwt_token, id } = details;
+    Cookies.set("jwt_token", jwt_token, { expires: 30 });
+    Cookies.set("id", id, { expires: 30 });
     window.location.href = "/dashboard";
   };
 
@@ -39,7 +41,7 @@ class Login extends Component {
     const response = await fetch(apiUrl, options);
     const data = await response.json();
     if (response.ok) {
-      this.onLoginSuccess(data.jwt_token);
+      this.onLoginSuccess(data);
     } else {
       this.onLoginFailure(data.message);
     }
@@ -51,6 +53,11 @@ class Login extends Component {
 
   render() {
     const { error_msg } = this.state;
+    const token = Cookies.get("jwt_token");
+
+    if (token !== undefined) {
+      window.location.href = "/dashboard";
+    }
     return (
       <div className="login-container">
         <div className="container">

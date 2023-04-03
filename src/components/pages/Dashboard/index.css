@@ -1,0 +1,27 @@
+.dashboard-container {
+  background-color: #f2f2fd;
+  height: 100vh;
+  background-size: cover;
+}
+
+.skeleton-line {
+  display: inline-block;
+  height: 1.2em;
+  width: 180px;
+  height: 3px;
+  background-color: #e5e5e5;
+  border-radius: 4px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
