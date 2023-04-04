@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../Header";
-import Scroll from "../Scroll/SmoothScroll";
+// import Scroll from "../Scroll/SmoothScroll";
 import "./index.css";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Header home />
       <div className="home-container">
-        <Scroll />
+        {/* <Scroll /> */}
         <section className="hero-row">
           <div className="hero-section">
             <h1 className="hero-heading">

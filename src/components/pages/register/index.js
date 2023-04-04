@@ -56,67 +56,65 @@ class Register extends Component {
   render() {
     return (
       <div className="register-container">
-        <div>
-          <form className="register-form" onSubmit={this.onClickSubmitUserData}>
-            <img
-              alt="website log"
-              src="https://res.cloudinary.com/dy1lfg1dp/image/upload/v1679898632/favicon_jh2rkp.png"
-              className="logo"
-            />
-            <h1 className="form-heading">Create Account</h1>
-            <p className="signInRef">
-              Already have an account? <Link to="/login">Sign in</Link>
-            </p>
-            <LoginSocialGoogle
-              client_id={
-                "380302030924-6vdsufb59sp74h0bpa1oirmh3ajcf16f.apps.googleusercontent.com"
-              }
-              scope="openid profile email"
-              discoveryDocs="claims_supported"
-              access_type="offline"
-              onResolve={({ provider, data }) => {
-                console.log(provider, data);
-              }}
-              onReject={(err) => {
-                console.log(err);
-              }}
-            >
-              <button className="g-signup-btn">
-                <RiGoogleFill /> Sign up with Google
-              </button>
-            </LoginSocialGoogle>
-            <p className="or">or</p>
-            <div className="nameInputRow">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="firstName"
-                onChange={this.onChangeFirstName}
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="lastName"
-                onChange={this.onChangeLastName}
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Work Email"
-              className="userEmail"
-              onChange={this.onChangeUserEmail}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              className="userPass"
-              onChange={this.onChangeUserPassword}
-            />
-            <button type="submit" className="signUpBtn">
-              Sign up with email
+        <form className="register-form" onSubmit={this.onClickSubmitUserData}>
+          <img
+            alt="website log"
+            src="https://res.cloudinary.com/dy1lfg1dp/image/upload/v1679898632/favicon_jh2rkp.png"
+            className="logo"
+          />
+          <h1 className="form-heading">Create Account</h1>
+          <p className="signInRef">
+            Already have an account? <Link to="/login">Sign in</Link>
+          </p>
+          <LoginSocialGoogle
+            client_id={
+              "380302030924-6vdsufb59sp74h0bpa1oirmh3ajcf16f.apps.googleusercontent.com"
+            }
+            scope="openid profile email"
+            discoveryDocs="claims_supported"
+            access_type="offline"
+            onResolve={({ provider, data }) => {
+              console.log(provider, data);
+            }}
+            onReject={(err) => {
+              console.log(err);
+            }}
+          >
+            <button className="g-signup-btn">
+              <RiGoogleFill /> Sign up with Google
             </button>
-          </form>
-        </div>
+          </LoginSocialGoogle>
+          <p className="or">or</p>
+          <div className="nameInputRow">
+            <input
+              type="text"
+              placeholder="First Name"
+              className="firstName"
+              onChange={this.onChangeFirstName}
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="lastName"
+              onChange={this.onChangeLastName}
+            />
+          </div>
+          <input
+            type="email"
+            placeholder="Work Email"
+            className="userEmail"
+            onChange={this.onChangeUserEmail}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="userPass"
+            onChange={this.onChangeUserPassword}
+          />
+          <button type="submit" className="signUpBtn">
+            Sign up with email
+          </button>
+        </form>
       </div>
     );
   }
